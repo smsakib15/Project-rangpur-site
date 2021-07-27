@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap-5.0.1-dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: lightgreen;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="www.rangpur.gov.bd"><img src="images/Rangpur logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gallary</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Historial Places
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#one">Tajhat Jomidarbari</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#two">Town Hall</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#three">Rangpur Zoo</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#four">Ghaghot Sena Proyas Park</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#five">Taraganj eco Park</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#six">Parbotipur Railway Station</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">About</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+     
+      <h2 style="margin: 90px 0px 0px 115px">Historical Places</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div style="font-size: large;" class="numbertext">1 / 6  Tajhat Jomidarbari</div>
+    <img src="Images/Tajhat-Palace-Rangpur-Bangl.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div style="font-size: large; color: black;" class="numbertext">2 / 6 Town Hall</div>
+    <img src="Images/Townhall_rangpur.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div style="font-size: large;" class="numbertext">3 / 6 Rangpur Zoo</div>
+    <img src="Images/Rangpur_zoo.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div style="font-size: large; color: black;" class="numbertext">4 / 6 Ghaghot Sena Proyas Park</div>
+    <img src="Images/Proyash.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div style="font-size: large; color: black;" class="numbertext">5 / 6 Taraganj eco Park</div>
+    <img src="Images/iloverangpur.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div style="font-size: large;" class="numbertext">6 / 6 Parbotipur Railway Station</div>
+    <img src="Images/Parbotipur march10.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+
+  </div>
+
+    <h4 style="margin: 40px 115px; color: blueviolet;">Here we have discussed some places that represents Rangpur for their history.</h4>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<div style="margin: 50px 115px;">
+  <h3 id="one" class="text-primary">Tajhat Jomidarbari</h3>
+  <p>Tajhat Palace, Tajhat Rajbari, is a historic palace of Bangladesh, located in Tajhat, Rangpur.[1] This palace now holds the Rangpur museum.[2] Tajhat Palace is situated three km. south-east of the city of Rangpur, on the outskirts of town.</p>
+
+  <h3 id="two" class="text-primary">Town Hall</h3>
+  <p>Rangpur Town Hall is the traditional center for the whole cultural and political activities in Rangpur. Town Hall is holding the tradition and memory of almost a century. This is not just an auditorium, but rather a cultural, political, and social center. </p>
+
+  <h3 id="three" class="text-primary">Rangpur Zoo</h3>
+  <p>Recreation Park and Rangpur Zoo, (Bengali: বিনোদন উদ্যান ও রংপুর চিড়িয়াখানা) is located in Rangpur, Bangladesh, is the largest zoo in North Bengal and the second largest in Bangladesh in terms of size. Rangpur Central Zoo is one of the recreation spots in Rangpur city.</p>
+
+  <h3 id="four" class="text-primary">Ghaghot Sena Proyas Park</h3>
+  <p>বাংলাদেশ সেনাবাহিনী প্রায় ১১০০ একর জায়গা নিয়ে ২০১৩ সালে ঘাঘট নদীর দুপাশে গড়ে তুলেছে প্রয়াস সেনা বিনোদন পার্ক। নদী পারাপারের জন্য নৌকার ব্যবস্থা আছে। বেশ গোছানো এ পার্কের উপার্জনের ৭৫ শতাংশ ব্যয় হয় প্রতিবন্ধীদের কল্যাণে। সেনা চৌকি পুরো বিনোদন কেন্দ্রটিকে করেছে নিরাপদ ও নির্ঝঞ্ঝাট।চমৎকার মুখোমুখি বসবার জন্য ব্যবস্থা থাকায় কপোত-কপোতিদের উপস্থিতিই অধিক। এত চমৎকার স্পট এর আগে চোখে পড়েনি।সুন্দর জায়গা। তাই নদীর পাড়ে নির্মল বিনোদন উপভোগের এক অপূর্ব নিদর্শন।</p>
+
+  <h3 id="five" class="text-primary">Taraganj eco Park</h3>
+  <p>বামনদিঘী (তারাগঞ্জ) ইকো পার্ক (এখনো কাজ চলতেছে)
+    পরিবেশ : নিরিবিলি যাওয়ার নিয়ম: বাসঃ রংপুর মেডিকেল মোড় থেকে বাসে উঠে বামনদিঘী। ভাড়া ২০ টাকা। অথবা অটো :মেডিকেল মোড়ে অটো করে পাগলাপীর যাইতে হবে (ভাড়া ১৫ টাকা)। পাগলাপীর থেকে অটো,ভ্যান,সিএনজি করে বামনদিঘী (১০ টাকা ভাড়া)</p>
+
+  <h3 id="six" class="text-primary">Parbotipur Railway Station</h3>
+  <p>During the British period all railway connections to Assam and North Bengal were through the eastern part of Bengal. From 1878, the railway route from Kolkata, then called Calcutta, to Siliguri was in two laps. The first lap was a 185 km journey along the Eastern Bengal State Railway from Calcutta Station (later renamed Sealdah) to Damookdeah Ghat on the southern bank of the Padma River, then across the river in a ferry and the second lap of the journey, which was a 336 km metre gauge line of the North Bengal Railway that linked Saraghat on the northern bank of the Padma to Siliguri.[1]</p>
+</div>
+
+
+</body>
+</html>
